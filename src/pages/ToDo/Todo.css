@@ -1,0 +1,42 @@
+
+.round-checkbox {
+    display: none;
+}
+
+.round-checkbox-label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 1px solid #676769;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s ease-in-out;
+    /* Add transition for smooth effect */
+}
+
+.tick-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #4CAF50;
+    pointer-events: none;
+    display: block;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    /* Hide the tick icon by default */
+    transition: opacity 0.3s ease-in-out;
+    /* Add transition for smooth effect */
+}
+
+.round-checkbox:checked+.round-checkbox-label {
+    border-color: #4CAF50;
+    /* Change the border color to green */
+}
+
+.round-checkbox:checked+.round-checkbox-label .tick-icon {
+    opacity: 1;
+    /* Show the tick icon when the checkbox is checked */
+}
